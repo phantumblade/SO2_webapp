@@ -2,11 +2,11 @@
 <html><head><meta charset="utf-8"><title>Redirect</title></head>
 <body>
   <script>
-    // Percorso della project page
-    var base = '/SO2_webapp';
+    // Redirect script per GitHub Pages con base dinamica
     var l = window.location;
-    // Mantiene path/query/hash convertendoli in hash routing
-    var newUrl = base + '/#' + l.pathname.replace(base,'').replace(/^\//,'') + l.search + l.hash;
+    var base = '/' + l.pathname.split('/')[1];
+    var newUrl = base + '/#' + l.pathname.replace(base, '').replace(/^\//, '') + l.search + l.hash;
     l.replace(newUrl);
   </script>
 </body></html>
+
