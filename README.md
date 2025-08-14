@@ -2,6 +2,8 @@
 
 Applicazione web per il corso di **Sistemi Operativi 2**, focalizzata sulla gestione dell'Input/Output e dei dispositivi. Il progetto è realizzato con **React**, **TypeScript** e **Vite**, con stile moderno gestito da **Tailwind CSS** e supporto per la modalità scura.
 
+**Sito online:** https://phantumblade.github.io/SO2_webapp/
+
 ## Caratteristiche
 - Interfaccia reattiva per la consultazione delle lezioni
 - Tema chiaro/scuro con salvataggio della preferenza
@@ -16,7 +18,7 @@ Applicazione web per il corso di **Sistemi Operativi 2**, focalizzata sulla gest
 1. Clonare il repository:
    ```bash
    git clone <url-del-repo>
-   cd SO2-website
+   cd SO2_webapp
    ```
 2. Installare le dipendenze:
    ```bash
@@ -51,6 +53,11 @@ Applicazione web per il corso di **Sistemi Operativi 2**, focalizzata sulla gest
   3) Pusha le modifiche su `main` per aggiornare il sito.
 
 Nota: La configurazione Vite imposta `base` su `/SO2_webapp/` (nome repo), necessario per i project site su GitHub Pages.
+
+### Troubleshooting Pages
+- Se la pagina appare bianca: verifica che l'HTML online punti a `/SO2_webapp/assets/...` (non a `/src/main.tsx`).
+- Svuota la cache del browser (hard refresh) o attendi la propagazione del deploy (1–2 minuti).
+- In caso di 404 sugli asset, controlla che la Source sia “GitHub Actions” oppure `main / docs`.
 
 ## Struttura del progetto
 - `src/` – componenti e logica dell'applicazione
