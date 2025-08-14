@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/SO2_webapp/',        // 👈 necessario per GitHub Pages (project page)
+  // Use a relative base so the app works on GitHub Pages and in local previews
+  base: './',
   server: { host: true, port: 5173 },
   preview: { host: true, port: 4173 },
 })
