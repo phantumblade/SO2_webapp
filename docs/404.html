@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirect</title>
+  </head>
+  <body>
+    <script>
+      // Redirect script per GitHub Pages con base dinamica (supporto SPA)
+      var l = window.location;
+      var base = '/' + l.pathname.split('/')[1];
+      var newUrl = base + '/#' + l.pathname.replace(base, '').replace(/^\//, '') + l.search + l.hash;
+      l.replace(newUrl);
+    </script>
+  </body>
+  </html>
+
