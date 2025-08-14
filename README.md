@@ -40,6 +40,14 @@ Applicazione web per il corso di **Sistemi Operativi 2**, focalizzata sulla gest
   npm run preview
   ```
 
+## Distribuzione su GitHub Pages
+- Eseguire la build:
+  ```bash
+  npm run build
+  ```
+- Caricare il contenuto della cartella `dist` nel branch `gh-pages` del repository.
+- La configurazione Vite utilizza un `base` relativo, quindi l'app funzionerà correttamente sia in locale sia su GitHub Pages.
+
 ## Struttura del progetto
 - `src/` – componenti e logica dell'applicazione
 - `index.html` – punto di ingresso dell'app
