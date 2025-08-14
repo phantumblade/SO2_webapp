@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, type FC } from 'react';
 import {
   ChevronRight,
   ChevronLeft,
@@ -18,7 +18,7 @@ import {
  * A small theme toggle button that flips the `dark` class on the root document element.
  * It persists the selection in localStorage and respects the user's system preference by default.
  */
-const ThemeToggle: React.FC = () => {
+const ThemeToggle: FC = () => {
   const [theme, setTheme] = useState(() => {
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('theme');
@@ -56,7 +56,7 @@ const ThemeToggle: React.FC = () => {
   );
 };
 
-const LessonsApp: React.FC = () => {
+const LessonsApp: FC = () => {
   const [selectedLesson, setSelectedLesson] = useState<number | null>(null);
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
   const [showSectionMenu, setShowSectionMenu] = useState(false);
