@@ -16,7 +16,7 @@ Applicazione web per il corso di **Sistemi Operativi 2**, focalizzata sulla gest
 1. Clonare il repository:
    ```bash
    git clone <url-del-repo>
-   cd SO2_webapp
+   cd SO2-website
    ```
 2. Installare le dipendenze:
    ```bash
@@ -41,12 +41,16 @@ Applicazione web per il corso di **Sistemi Operativi 2**, focalizzata sulla gest
   ```
 
 ## Distribuzione su GitHub Pages
-- Eseguire la build:
-  ```bash
-  npm run build
-  ```
-- Caricare il contenuto della cartella `dist` nel branch `gh-pages` del repository.
-- La configurazione Vite utilizza un `base` relativo, quindi l'app funzionerà correttamente sia in locale sia su GitHub Pages.
+- Opzione A — GitHub Actions (consigliata):
+  1) In Settings → Pages seleziona "GitHub Actions" come source.
+  2) Fai push su `main`: il workflow `.github/workflows/pages.yml` builda e deploya automaticamente.
+
+- Opzione B — Branch/Cartella `docs/`:
+  1) Esegui la build: `npm run build` (output in `docs/`).
+  2) In Settings → Pages, scegli "Deploy from a branch" → branch `main`, folder `/docs`.
+  3) Pusha le modifiche su `main` per aggiornare il sito.
+
+Nota: La configurazione Vite imposta `base` su `/SO2_webapp/` (nome repo), necessario per i project site su GitHub Pages.
 
 ## Struttura del progetto
 - `src/` – componenti e logica dell'applicazione
@@ -59,4 +63,3 @@ Questo progetto è distribuito con licenza MIT. Vedere il file `LICENSE` (se pre
 
 ## Contributi
 Le proposte di miglioramento sono benvenute. Aprire una issue o inviare una pull request.
-

@@ -1,7 +1,5 @@
-const { fontFamily } = require('tailwindcss/defaultTheme');
-
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: 'class',
   content: [
     './index.html',
@@ -54,7 +52,16 @@ module.exports = {
       borderRadius: {
         lg: 'var(--radius)',
       },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(-10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        }
+      },
+      animation: {
+        fadeIn: 'fadeIn 0.3s ease-out',
+      }
     },
   },
-  plugins: [require('tailwindcss-animate')],
-};
+  plugins: [],
+}
