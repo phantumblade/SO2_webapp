@@ -7,7 +7,7 @@ Applicazione web per il corso di **Sistemi Operativi 2**, focalizzata sulla gest
 ## Caratteristiche
 - Interfaccia reattiva per la consultazione delle lezioni
 - Tema chiaro/scuro con salvataggio della preferenza
-- Contenuti modulari e facilmente estendibili
+- Contenuti generati dai file Markdown in `slide_markdown/`
 - Configurazione basata su Vite per tempi di build rapidi
 
 ## Prerequisiti
@@ -53,6 +53,12 @@ Applicazione web per il corso di **Sistemi Operativi 2**, focalizzata sulla gest
   3) Pusha le modifiche su `main` per aggiornare il sito.
 
 Nota: La configurazione Vite imposta `base` su `/SO2_webapp/` (nome repo), necessario per i project site su GitHub Pages.
+
+## Aggiungere/aggiornare i contenuti
+- Modifica o aggiungi file Markdown in `slide_markdown/` (es. `Lezione3.md`).
+- Il sito costruisce automaticamente una singola lezione con una sezione per ogni file.
+- Il titolo è preso dal primo heading `#` del file; la descrizione dalla prima frase/blockquote.
+- Le icone utilizzano Font Awesome (via CDN) per un look professionale e coerente.
 
 ### Troubleshooting Pages
 - Se la pagina appare bianca: verifica che l'HTML online punti a `/SO2_webapp/assets/...` (non a `/src/main.tsx`).
